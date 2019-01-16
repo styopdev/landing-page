@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>LCG</title>
 </head>
@@ -42,12 +44,26 @@
                                     <li><a href="#" class="telegram" title="Telegram"></a></li>
                                 </ul>
                                 <div class="flagList">
-                                    <select id="flags">
-                                        <option>GB</option>
-                                        <option>RU</option>
-                                    </select>
+                                    <div class="select-language" id="select-language">
+                                        <div class="default-option">
+                                            <label>
+                                                <img src="img/flag-gb.jpg" alt="en">Eng
+                                            </label>
+                                        </div>
+                                        <div class="options">
+                                            <div class="option">
+                                                <a href="#"><img src="img/flag-gb.jpg" alt="ru">Rus</a>
+                                            </div>
+                                        </div>
+                                        <i class="q4bikon-arrow_bottom"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <a class="responsiveBtn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
 
                         </div>
                     </div>
@@ -59,10 +75,12 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-7">
+                        <div class="col-lg-8">
                             <h1 class="mainTitle">A blockchain-based
                                 energy token backed
                                 by real energy</h1>
+                            <h1 class="mainTitleMobile">Unison Cash</h1>
+                            <h2 class="mainSubTitleMobile">The alternative to traditional money</h2>
 
                             <div class="mainOptions">
                                 <ul class="mainOptionsList">
@@ -96,7 +114,7 @@
                             </div><!--.mainOptions-->
 
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-lg-4">
 
                             <div class="keepTouch">
 
@@ -135,6 +153,9 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <div class="subscriptionMobile">
+                                    <a href="#" class="register">Register Now</a>
+                                </div>
 
                             </div>
 
@@ -151,6 +172,9 @@
                     <div class="col-sm-12">
                         <h2 class="sectionTitle">Watch the video</h2>
                     </div>
+
+                </div>
+                <div class="row">
                     <div class="col-sm-12">
                         <div class="videoBox">
                             <iframe src="https://player.vimeo.com/video/102024647" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -209,7 +233,7 @@
                         <h2 class="sectionTitle">Token and funds distribution</h2>
                     </div>
                     <div class="tokensDistribItemList">
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="tokensDistribItem">
                                 <h3 class="tokensDistribTitle">Private Sale</h3>
                                 <h4 class="tokensDistribSubTitle">Bonus 25%</h4>
@@ -225,7 +249,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="tokensDistribItem">
                                 <h3 class="tokensDistribTitle">Private Sale</h3>
                                 <h4 class="tokensDistribSubTitle">Bonus 25%</h4>
@@ -241,7 +265,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <div class="tokensDistribItem">
                                 <h3 class="tokensDistribTitle">Private Sale</h3>
                                 <h4 class="tokensDistribSubTitle">Bonus 25%</h4>
@@ -258,8 +282,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
 
                 </div>
@@ -285,78 +307,94 @@
 
 
         <section class="roadmap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2 class="sectionTitle">Roadmap</h2>
+
+            <div class="roadmapDesktop">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="sectionTitle">Roadmap</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <ul class="roadMapList top">
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="roadMapList top">
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="roadMapPoints"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="roadMapList">
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                                <li>
+                                    <h4 class="roadMapTitle">Q4 2018</h4>
+                                    <p class="roadMapCaption">Smart Contract development</p>
+                                    <p class="roadMapCaption">Security Audit</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="roadMapPoints"></div>
+            </div><!--.roadmapDesktop--->
+
+            <div class="roadmapMobile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="sectionTitle">Roadmap</h2>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <ul class="roadMapList">
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                            <li>
-                                <h4 class="roadMapTitle">Q4 2018</h4>
-                                <p class="roadMapCaption">Smart Contract development</p>
-                                <p class="roadMapCaption">Security Audit</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
+
         </section>
         <section class="team">
             <div class="container">
@@ -389,6 +427,40 @@
                         </ul>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="teamMembersSlider">
+
+                            <div class="owl-carousel">
+                                <div>
+                                    <img src="img/team-member.jpg" alt="team member">
+                                    <h4 class="temMemberName">John Smith</h4>
+                                    <h5 class="temMemberTitle">CEO</h5>
+                                    <span class="linkedInLink"></span>
+                                </div>
+                                <div>
+                                    <img src="img/team-member.jpg" alt="team member">
+                                    <h4 class="temMemberName">John Smith</h4>
+                                    <h5 class="temMemberTitle">CEO</h5>
+                                    <span class="linkedInLink"></span>
+                                </div>
+                                <div>
+                                    <img src="img/team-member.jpg" alt="team member">
+                                    <h4 class="temMemberName">John Smith</h4>
+                                    <h5 class="temMemberTitle">CEO</h5>
+                                    <span class="linkedInLink"></span>
+                                </div>
+                                <div>
+                                    <img src="img/team-member.jpg" alt="team member">
+                                    <h4 class="temMemberName">John Smith</h4>
+                                    <h5 class="temMemberTitle">CEO</h5>
+                                    <span class="linkedInLink"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
              </div>
         </section>
         <section class="featuredIn">
@@ -400,9 +472,15 @@
                 </div>
 
                 <ul class="featuredInList">
-                    <li><span class="first"></span></li>
-                    <li><span class="second"></span></li>
-                    <li><span class="third"></span></li>
+                    <li>
+                        <a href="#"><span class="first"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="second"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="third"></span></a>
+                    </li>
                 </ul>
 
              </div>
@@ -438,21 +516,21 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <h3 class="footerColTitle">RESOURCES</h3>
                     <ul class="footerColList">
                         <li><a href="#" title="White Paper">>> &nbsp; White Paper</a></li>
                         <li><a href="#" title="One paper">>> &nbsp; One paper</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
-                    <h3 class="footerColTitle">RESOURCES</h3>
+                <div class="col-lg-4">
+                    <h3 class="footerColTitle">Contact</h3>
                     <ul class="footerColList">
                         <li><a href="#" title="White Paper">>> &nbsp; White Paper</a></li>
                         <li><a href="#" title="One paper">>> &nbsp; One paper</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <h3 class="footerColTitle">ABOUT US</h3>
                     <ul class="footerColList">
                         <li><a href="#" title="White Paper">>> &nbsp; White Paper</a></li>
@@ -469,6 +547,9 @@
         </div>
     </footer>
 
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+    <script type="application/javascript" src="js/script.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.js"></script>-->
 </body>
 </html>

@@ -97,8 +97,15 @@ header{
 
 .logo{
     float: left;
-    width: 160px;
     margin-right: 28px;
+}
+.logo.logoDesktop {
+    display: block;
+    width: 160px;
+}
+.logo.logoMobile {
+    display: none;
+    width: 60px;
 }
 .logo a{
     display: block;
@@ -221,7 +228,7 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     height: 45px;
     border: 1px solid #ffffff;
     border-radius: 35px;
-    background-color: #01040b;
+    background-color: rgba(1,4,11, 0.7);
     color: #ffffff;
     position: relative;
     font-size: 14px;
@@ -255,16 +262,30 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     margin: 0 10px 0 0;
     border: 1px solid #d4e1ea;
 }
+.select-language .options .option span,
+.select-language .default-option label span{
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
+    position: relative;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+}
 .select-language .options {
     display: none;
-    background: white;
+    background: rgba(1,4,11, 0.7);
     border: 1px solid #d4e1ea;
     position: absolute;
-    top: 34px;
+    top: 45px;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 9999;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .select-language .options .option {
     overflow: hidden;
@@ -273,15 +294,41 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     border-bottom: 1px solid #d4e1ea;
     cursor: pointer;
 }
+.select-language .options .option:last-child {
+    border-bottom: none;
+}
 .select-language i {
+    display: inline-block;
+    width: 10px;
+    height: 6px;
     position: absolute;
-    top: 14px;
-    right: 10px;
+    top: 18px;
+    right: 13px;
     font-size: 10px;
     color: #ffffff;
     z-index: 9999;
+    background-image: url("../img/arrow-down.png");
 }
 
+
+.loginBtn {
+    display: none;
+    padding: 12px 45px;
+    border: 1px solid #00aeef;
+    border-radius: 35px;
+    background-color: rgba(1,4,11, 0.7);
+    color: #ffffff;
+    position: relative;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
+}
+
+.head .loginBtn {
+    float: right;
+    margin-top: 9px;
+}
 
 .headOptions{
     padding-top: 84px;
@@ -333,7 +380,7 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     text-align: center;
     cursor: pointer;
 }
-.subscriptionMobile .register{
+.register{
     display: inline-block;
     background-color: #cda326;
     border: 1px solid #cda326;
@@ -350,6 +397,29 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     text-transform: capitalize;
     cursor: pointer;
 }
+
+.lcgBtn{
+    display: inline-block;
+    color: #ffffff;
+    border: 1px solid #00aeef;
+    text-align: center;
+    font-size: 16px;
+    font-family: Montserrat, Arial, Verdana, SansSerif;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 27.5px;
+    padding: 18px 32px;
+    width: 100%;
+    outline: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.lcgBtn.blue{
+    background-color: #00aeef;
+    border: 1px solid #00aeef;
+}
+
+
 .owl-carousel{
     display: none;
 }
@@ -477,7 +547,6 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     background-repeat: no-repeat;
     -webkit-background-size:cover;
     background-size:cover;
-
 }
 .videoBox{
     padding-top: 85px;
@@ -487,6 +556,19 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     width: 100%;
     height: 550px;
 }
+.unison{
+    display: none;
+}
+.energyFeatures{
+    display: block;
+}
+.unisonEcoSystem{
+    display: none;
+}
+.entities{
+    display: none;
+}
+
 .technologyList{
     display: flex;
     justify-content: space-between;
@@ -523,7 +605,9 @@ select#flags option[value="RU"] { background-image:url("../img/flag-gb.jpg"); } 
     font-style: normal;
 }
 
-
+.techCycles{
+    display: none;
+}
 
 .lcgFeaturesList{
     display: flex;
@@ -910,9 +994,18 @@ footer{
     .head{
         height: auto;
     }
+    .logo.logoDesktop {
+        display: none;
+    }
+    .logo.logoMobile {
+        display: block;
+    }
     .headOptions{
         padding-top: 60px;
         padding-bottom: 120px;
+    }
+    .loginBtn{
+        display: inline-block;
     }
     .navigationMobile {
         width: 100%;
@@ -1004,10 +1097,76 @@ footer{
         margin-top: 30px;
     }
 
+    .unison{
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+
+    .unison .unisonSubtitle{
+        color: #ffffff;
+        font-size: 14px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 50px;
+    }
+    .unison .unisonListIcon{
+        display: inline-block;
+        vertical-align: middle;
+        width: 65px;
+        height: 65px;
+    }
+    .unisonList li{
+        margin-bottom: 25px;
+    }
+    .unison .unisonListIcon.first{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -582px -371px;
+    }
+    .unison .unisonListIcon.second{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -680px -368px;
+    }
+    .unison .unisonListIcon.third{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -765px -375px;
+    }
+    .unison .unisonListIcon.fourth{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -582px -371px;
+    }
+
+    .unison .unisonListTitle{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+    }
+    .unison .unisonListDesc{
+        color: #ffffff;
+        font-size: 12px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        line-height: 20px;
+        margin-top: 18px;
+    }
+
     .videoBox{
         padding-top: 15px;
     }
+    .energyFeatures{
+        display: none;
+    }
     .tokensDistribution {
+        display: none;
         padding-top: 60px;
         padding-bottom: 120px;
     }
@@ -1016,9 +1175,237 @@ footer{
     }
 
 
+    .unisonEcoSystem{
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    .unisonEcoCaption{
+        margin-top: 48px;
+    }
+    .unisonEcoTitle{
+        display: inline-block;
+        vertical-align: middle;
+        color: #f9c71a;
+        font-size: 20px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        line-height: 50px;
+
+    }
+    .unisonEcoTitleIcon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 58px;
+        height: 50px;
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -327px -60px;
+        margin-right: 18px;
+    }
+    .unisonEcoList {
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+    .unisonEcoList li {
+        margin-bottom: 18px;
+    }
+    .unisonEcoList .unisonEcoIcon{
+        display: inline-block;
+        vertical-align: top;
+        width: 27px;
+        height: 27px;
+    }
+    .unisonEcoList .unisonEcoIcon.first{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .unisonEcoList .unisonEcoIcon.second{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .unisonEcoList .unisonEcoIcon.third{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .unisonEcoList .unisonEcoIcon.fourth{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .unisonEcoList .unisonEcoText{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 55px);
+        color: #ffffff;
+        font-size: 12px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        line-height: 18px;
+        margin-left: 18px;
+    }
+
+
+    .mobileApps{
+        display: block;
+        margin-top: 45px;
+        text-align: center;
+    }
+    .mobileApps ul li{
+        margin-bottom: 7px;
+    }
+    .mobileApps ul li .mobileAppIcon{
+        width: 225px;
+        height: 67px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .mobileApps ul li .mobileAppIcon img{
+        display: block;
+    }
+    .mobileApps ul li .scan{
+        display: inline-block;
+        vertical-align: top;
+        width: 65px;
+        height: 65px;
+        margin-left: 30px;
+    }
+    .mobileApps ul li .scan img{
+        display: block;
+    }
+
     .teamMembers {
         display: none;
     }
+    .technologyList{
+        display: none;
+    }
+    .featuresToken{
+        display: none;
+    }
+
+    .entities{
+        display: block;
+    }
+    .unisonEcoTitleIcon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 58px;
+        height: 50px;
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -327px -60px;
+        margin-right: 18px;
+    }
+    .entitiesList {
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+    .entitiesList li {
+        margin-bottom: 38px;
+    }
+    .entitiesList .entitiesListIcon{
+        display: inline-block;
+        vertical-align: top;
+        width: 46px;
+        height: 46px;
+    }
+    .entitiesList .entitiesListIcon.first{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -452px -60px;
+    }
+    .entitiesList .entitiesListIcon.second{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -526px -60px;
+    }
+    .entitiesList .entitiesListIcon.third{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -607px -61px;
+    }
+    .entitiesList .entitiesListIcon.fourth{
+        height: 58px;
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -683px -60px;
+    }
+    .entitiesList .entitiesListTitle{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 80px);
+        color: #ffffff;
+        font-size: 16px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        line-height: 22px;
+        margin-left: 18px;
+    }
+
+    .techCycles{
+        display: block;
+    }
+    .techCyclesSubTitle{
+        color: #ffffff;
+        font-size: 22px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 600;
+        font-style: normal;
+        text-align: left;
+        line-height: 50px;
+    }
+    .techCyclesList{
+        margin-top: 45px;
+        margin-bottom: 35px;
+    }
+    .techCyclesSubList{
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+    .techCyclesSubList li {
+        margin-bottom: 18px;
+    }
+    .techCyclesSubList .techCyclesSubIcon{
+        display: inline-block;
+        vertical-align: top;
+        width: 27px;
+        height: 27px;
+    }
+    .techCyclesSubList .techCyclesSubIcon.first{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .techCyclesSubList .techCyclesSubIcon.second{
+        background-image: url(../img/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -263px -60px;
+    }
+    .techCyclesSubList .techCyclesSubText{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 55px);
+        color: #ffffff;
+        font-size: 12px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        line-height: 18px;
+        margin-left: 18px;
+    }
+
+
 
 
     .teamMembersSlider{
@@ -1155,7 +1542,8 @@ footer{
     }
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 360px) {
 
     .team {
         background-image: url("../img/team-member-bg.jpg");
@@ -1165,5 +1553,23 @@ footer{
         width: 100%;
         background-position: center center;
         height: 650px;
+    }
+    .unison{
+        background-image: url("../img/unison-bg.jpg");
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        width: 100%;
+        background-position: center center;
+        height: auto;
+    }
+    .techCycles{
+        background-image: url("../img/tech-cycles-bg.jpg");
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        width: 100%;
+        background-position: center center;
+        height: auto;
     }
 }

@@ -27,4 +27,28 @@ $( document ).ready(function() {
 
         $(".navigationMobile").slideToggle();
     });
+
+
+    $(document).on('click', '.select-language', function(e) {
+
+        var self = $(this).closest('.select-language');
+        self.find('.options').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $(document).on('click', '.select-language .option', function(e) {
+        var $this = $(this);
+        var self = $this.closest('.select-language');
+        var $defaultOption = $('.select-language .default-option');
+        var option = $this.html();
+        var optionNumber = $this.index() - 1;
+        var defOption = $defaultOption.find('.option:first-child').html();
+        self.find('.option').each(function() {
+            $(this).find('input[type=radio]').removeAttr('checked');
+        });
+        // $(this).find('input[type=radio]').attr('checked', 'checked');
+        $defaultOption.html(option);
+        self.find('.option:nth-child(' + optionNumber + ')').html(defOption);
+    });
 });

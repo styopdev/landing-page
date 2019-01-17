@@ -129,6 +129,9 @@ header{
     color: #ffffff;
     font-size: 16px;
 }
+.navigationMobile{
+    display: none;
+}
 
 .headerOptions{
     float: right;
@@ -907,8 +910,45 @@ footer{
     .head{
         height: auto;
     }
+    .headOptions{
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+    .navigationMobile {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background: #000;
+        height: auto;
+        float: none;
+        z-index: 5;
+        margin-left: 0;
+    }
+    .navigationMobile li {
+        height: auto;
+
+        width: 100%;
+        text-align: center;
+        border-top: 0.5px solid #34333F;
+    }
+    .navigationMobile li a {
+        display: block;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px 0;
+        white-space: nowrap;
+        outline: none;
+    }
     .mainTitle{
         display: none;
+    }
+    .sectionTitle{
+        font-size: 30px;
+        line-height: 40px;
     }
     .mainTitleMobile{
         display: block;
@@ -953,6 +993,9 @@ footer{
     .navigation {
         display: none;
     }
+    .keepTouch{
+        height: auto;
+    }
     .subscription{
         display: none;
     }
@@ -961,7 +1004,13 @@ footer{
         margin-top: 30px;
     }
 
-
+    .videoBox{
+        padding-top: 15px;
+    }
+    .tokensDistribution {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
     .tokensDistribution .tokensDistribItem{
         margin-bottom: 15px;
     }
@@ -1028,11 +1077,60 @@ footer{
     }
 
 
+    .roadmap{
+        background-image: none;
+    }
     .roadmapDesktop {
         display: none;
     }
     .roadmapMobile{
         display: block;
+    }
+    .roadMapListMobile{
+        display: inline-block;
+        margin-top: 50px;
+    }
+    .roadMapListMobile li{
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0;
+    }
+    .roadMapListMobile li .roadMapListMicon{
+        display: inline-block;
+        vertical-align: top;
+        width: 46px;
+        height: 104px;
+        background-image: url("../img/road-map-list-mobile.png");
+        background-repeat: no-repeat;
+    }
+    .roadMapListMobile li .roadMapListContent{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 55px);
+        height: 104px;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .roadMapListMobile li .roadMapListMTitle{
+        color: #ffffff;
+        font-size: 15px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 24px;
+    }
+    .roadMapListMobile li .roadMapListMCaption{
+        color: #ffffff;
+        font-size: 13px;
+        font-family: Montserrat, Arial, Verdana, SansSerif;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 28px;
+        background-image: url("../img/triangle.png");
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        padding-left: 35px;
     }
 
     .featuredInList {
